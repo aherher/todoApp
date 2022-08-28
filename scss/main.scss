@@ -1,0 +1,128 @@
+@charset "utf-8";
+@import "./mixin";
+
+.center_box {
+  width: 95%;
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+input,
+button {
+  border: none;
+  background: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+body {
+  background-color: $dark;
+}
+.wrap {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  padding: clamp(0.1rem, 3vw, 4rem);
+  border-radius: 4rem;
+  margin-top: 8rem;
+  min-height: 80vh;
+}
+header {
+  padding: 8rem 0 4rem 0;
+  // padding-bottom: 4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+  h1 {
+    font-size: 4.5rem;
+    margin-bottom: 0.6em;
+    color: $grey;
+    // text-align: center;
+  }
+
+  .inputWrap {
+    display: flex;
+    gap: 1rem;
+
+    .inputTxt {
+      background-color: $darker;
+      color: $light;
+      font-size: 1.8rem;
+      height: 5rem;
+      border-radius: 1.5rem;
+      padding: 0 1.5rem;
+      box-sizing: border-box;
+      width: calc(100% - 9rem);
+      &::placeholder {
+        color: $light;
+      }
+    }
+
+    .addBtn {
+      font-size: 2rem;
+      font-weight: 700;
+      background-image: linear-gradient(to right, $pink, $purple);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: opacity 0.3s;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+main {
+  margin-top: 4rem;
+
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.6em;
+    color: $grey;
+    // text-align: center;
+  }
+
+  .listsWrap {
+    li {
+      @include flexCenter;
+      border-radius: 1.5rem;
+      height: 5rem;
+      background-color: $darkest;
+      padding: 0 1.5rem;
+      margin-bottom: 1.5rem;
+
+      input[type="text"] {
+        width: calc(100% - 12rem);
+        box-sizing: border-box;
+        color: $grey;
+        font-size: 1.8rem;
+        &.focus {
+          color: $pink;
+        }
+      }
+
+      .editBtn {
+        font-size: 1.6rem;
+        font-weight: 700;
+        background-image: linear-gradient(to right, $pink, $purple);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: opacity 0.3s;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+
+      .deleteBtn {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: $pink;
+        transition: opacity 0.3s;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}

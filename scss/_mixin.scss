@@ -1,0 +1,114 @@
+$lap: 1200px;
+$tablet: 960px;
+$mobile: 768px;
+
+
+
+@mixin mobileOnly {
+  @media screen and (max-width:$mobile) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media screen and (min-width:$lap) {
+    @content;
+  }
+}
+
+@mixin lap {
+  @media screen and (min-width:$tablet) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width:$mobile) {
+    @content;
+  }
+}
+
+// @mixin mobile {
+//   @media screen and (max-width:$mobile) {
+//     @content;
+//   }
+// }
+
+
+$dark: #374151;
+$darker: #1F2937;
+$darkest: #111827;
+$grey: #959ba5;
+$pink: #EC4899;
+$purple: #8B5CF6;
+$light: #EEE;
+
+@mixin centerX($p) {
+  position: $p;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin centerY($p) {
+  position: $p;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin centerC($p) {
+  position: $p;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin flexAlign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin layout($inbox: null, $mb: null, $sizing: $mobile) {
+  $box: unquote($inbox); //문자보간. 따옴표를 붙여야 한다.
+
+  @media screen and (max-width:$sizing) {
+    //모바일 기본값
+    flex-wrap: wrap;
+
+    #{$box} {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: $mb;
+      }
+    }
+  }
+}
+
+@mixin flexStart {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flexEnd {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+// 자동 폰트 사이즈
+@mixin font($s, $pcSize: $s, $line: 1.4) {
+  font-size: $s#{rem};
+  line-height: $line;
+
+  @include lap {
+    font-size: $pcSize#{rem};
+  }
+}

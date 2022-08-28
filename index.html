@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <header class="center_box">
+      <h1>Todo List</h1>
+      <div class="inputWrap">
+        <input
+          type="text"
+          class="inputTxt"
+          onkeyup="if(window.event.keyCode==13){doInputing()}"
+          placeholder="일정을 입력하세요."
+        />
+        <button class="addBtn">Add List</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="center_box">
+        <p class="title">Lists</p>
+        <ul class="listsWrap">
+          <li>
+            <input type="text" readonly="readonly" value="오전에 면접보기" />
+            <button class="editBtn">EDIT</button>
+            <button class="deleteBtn">DELETE</button>
+          </li>
+          <li>
+            <input type="text" readonly="readonly" value="오후에도 면접보기" />
+            <button class="editBtn">EDIT</button>
+            <button class="deleteBtn">DELETE</button>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <script src="js/app.js "></script>
+  </body>
+</html>

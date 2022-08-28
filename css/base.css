@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* reset style [start] */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, address, big, cite, code,
+del, dfn, em, font, img, ins, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td
+{margin: 0; padding: 0;	border:0; border-collapse:collapse;} /* vertical-align: baseline; outline: 0; ie 외 브라우저 포커싱 사라지는 문제로 제거 */
+img {vertical-align:top;}
+body {line-height:1;  color:#333; font-family: 'Noto Sans KR', sans-serif; font-style:normal; word-break:keep-all; font-weight:400;}
+input, textarea, select, button {box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif; font-style:normal; font-weight:400;}
+ol, ul, li {list-style: none;}
+blockquote, q {quotes: none;}
+ins {text-decoration: none;}
+del {text-decoration: line-through;}
+button { border:none; cursor:pointer;}
+/* tables still need 'cellspacing="0"' in the markup */
+/*table {border-spacing:0;} /* border-collapse: collapse; ff에서 border="0" 인 경우 문제 발생 */
+address,caption,cite,code,dfn,em,strong,th,var {font-style:normal;} /* font-weight:normal */
+/* reset style [end] */
+.radio {margin-bottom:-2px;border:none;}
+textarea {border:1px solid #969696;}
+caption {display: none;}
+legend { visibility:hidden; height:0; width:0; font-size:0;display:none;}
+html {font-size:62.5%;}
+
+
+*{ margin:0; padding:0;}
+a{text-decoration:none; color:#333;}
+a:hover,a:focus,a:active,a:active{text-decoration:none; outline: none;}
+
+h1, h2, h2, h3, b, strong, th {font-weight:700;}
+
+
+
+.mb0{ margin-bottom:0px !important;}
+.mb10{ margin-bottom:10px !important;}
+.mb20{ margin-bottom:20px !important;}
+.mb30{ margin-bottom:30px !important;}
+.mb40{ margin-bottom:40px !important;}
+.mb50{ margin-bottom:50px !important;}
+.mb60{ margin-bottom:60px !important;}
+.mb70{ margin-bottom:70px !important;}
+.mb80{ margin-bottom:80px !important;}
+.mb90{ margin-bottom:90px !important;}
+.mb100{ margin-bottom:100px !important;}
