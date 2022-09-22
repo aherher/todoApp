@@ -60,6 +60,8 @@ function doInputing() {
       //수정기능
       let editing = e.target.innerHTML
       let editingHTML = e.target
+      todoInputer = e.target.closest("li").querySelector("input")
+      console.log(todoInputer)
       editingFunction(editing, todoInputer, editingHTML)
     })
 
